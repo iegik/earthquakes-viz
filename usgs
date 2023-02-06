@@ -1,0 +1,5 @@
+#!/bin/bash
+# This script is used to download the USGS 7.5 minute DEMs for the whole World
+# Usage: ./usgs <start date> <end date>
+# Example: ./usgs 2023-01-07 2023-02-07
+curl "https://earthquake.usgs.gov/fdsnws/event/1/query.csv?starttime=$1%2000:00:00&endtime=$2%2023:59:59&minmagnitude=4.5&orderby=time" > earthquake_data.csv
